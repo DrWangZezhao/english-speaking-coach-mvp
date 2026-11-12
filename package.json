@@ -1,0 +1,13 @@
+{
+  "name": "english-speaking-coach-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "build": "node scripts/build.mjs",
+    "start": "node server/index.mjs",
+    "dev": "node server/index.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ee">
+  <meta name="description" content="独立的英语口语陪练实验版：用真实场景练习开口。">
+  <title>SpeakLoop · 英语口语陪练实验版</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="SpeakLoop 首页"><span class="brand-mark">s<span>·</span></span><span>SpeakLoop<small>英语口语实验室</small></span></a>
+      <span class="version">独立项目 · MVP 01</span>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">SPEAK A LITTLE, EVERY DAY <span></span> 每天开口一点点</p>
+          <h1 id="hero-title">让英语，<br><em>从“会”到“敢说”。</em></h1>
+          <p class="hero-description">选一个日常场景，听一句、说一句、得到即时鼓励。先用简单的练习验证体验，再接入独立部署的开源模型。</p>
+          <button id="start-button" class="primary-button" type="button">开始 3 分钟练习 <span aria-hidden="true">↗</span></button>
+          <p class="hero-note">无需注册 · 不保存练习内容 · 当前为预设课程演示</p>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="phrase-card phrase-one">Hello, how are you? <span>✦</span></div><div class="phrase-card phrase-two">I’m doing great! <span>↗</span></div><div class="sound-lines"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="hero-art-label">A SPACE TO SPEAK</span></div>
+      </section>
+      <section class="lessons" aria-labelledby="lessons-title">
+        <div class="section-heading"><div><p class="eyebrow">START HERE / 01</p><h2 id="lessons-title">今天想聊什么？</h2></div><p>三个轻量场景，一次只练几句话。</p></div>
+        <div class="lesson-grid" id="lesson-grid"></div>
+      </section>
+      <section class="practice hidden" id="practice" aria-labelledby="practice-title">
+        <div class="practice-head"><div><p class="eyebrow">YOUR SPEAKING SPACE</p><h2 id="practice-title">开始练习</h2></div><button id="close-practice" class="text-button" type="button">结束练习 ×</button></div>
+        <div class="practice-layout"><div class="dialogue-panel"><div class="dialogue-top"><span id="progress">第 1 / 3 句</span><span class="demo-pill">预设课程演示</span></div><div class="coach-avatar" aria-hidden="true"><span>↗</span></div><p class="speaker-label">YOUR COACH SAYS</p><p class="coach-prompt" id="coach-prompt"></p><button class="sound-button" id="play-prompt" type="button">▶ 听一遍</button><div class="feedback" id="feedback" role="status" aria-live="polite"></div></div>
+        <div class="answer-panel"><p class="eyebrow">YOUR TURN</p><h3>轮到你了。</h3><p class="answer-intro">先听，再用英文回答。你可以直接输入；支持本地识别的浏览器也可以用麦克风。</p><label for="answer">你的回答</label><textarea id="answer" rows="4" maxlength="280" placeholder="Type your answer in English..."></textarea><div class="hint" id="hint"></div><div class="answer-actions"><button class="secondary-button" id="mic-button" type="button" disabled>🎙 本地语音识别不可用</button><button class="primary-button" id="submit-answer" type="button">提交回答 <span aria-hidden="true">→</span></button></div><p class="privacy-note" id="mic-note">麦克风仅在浏览器明确支持设备端识别时开启；不使用云端语音识别。</p><p class="model-note">当前反馈来自预设规则，不是实时 AI。模型连接状态：<strong id="model-status">未连接</strong></p></div></div>
+      </section>
+      <section class="principles"><div><span class="principle-icon">01 /</span><strong>从开口开始</strong><p>先练真实表达，不用等到“准备好了”。</p></div><div><span class="principle-icon">02 /</span><strong>低门槛验证</strong><p>公开演示无需账号，也不会调用付费模型。</p></div><div><span class="principle-icon">03 /</span><strong>隐私先行</strong><p>当前演示不上传录音，不保存回答。</p></div></section>
+    </main>
+    <footer><span>SpeakLoop · independent English practice experiment</span><span>面向家长与成年测试者的产品原型；不是儿童正式服务</span></footer>
+  </div>
+</body>
+</html>
