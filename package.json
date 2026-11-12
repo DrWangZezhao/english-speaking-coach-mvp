@@ -1,5 +1,5 @@
 {
-  "name": "english-speaking-coach-mvp",
+  "name": "speakloop-fluency-mvp",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -9,5 +9,13 @@
     "start": "node server/index.mjs",
     "dev": "node server/index.mjs"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
 }
